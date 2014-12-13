@@ -1,4 +1,6 @@
 /**
+ * Filename: BCscoring.c
+ *
  * It has functions to give score, save it , print score
  * 
  * It is a simple number and word guessing game
