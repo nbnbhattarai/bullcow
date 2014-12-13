@@ -1,0 +1,31 @@
+README ( BULL-COW )
+===================
+
+This is a simple number or word guessing game.
+There are many type of game playing.
+
+number of bulls : Between two array of elements , it is the number of same elements
+				  in two array having same position in array are bull number.
+number of cow   : Between two array of elements , it is the number of same elements
+				  in two array having different position in array are bull number.
+
+( ) NUMBER OR WORD :
+	number is 4digit and no repeatation of element is allowed (digit from 0 to 9)
+	word ( 4 chars) can have any repeatation of chars but it should be english valid word
+
+1. PLAY WITH COMPUTER:
+	you can play guessing of word or number (4 chars , 4 digit) with computer
+	which also guesses your number. One who make right guess first win the game.
+2. GUESS :
+	In this type of game, you have to find the correct number or word within 8 steps
+	otherwise you will lose game.
+3. COMPUTER PLAYS FOR YOU:
+	If you are playing this game with others , then this feature is useful.
+	In this computer will give you number or word to guess and you have to give number
+	of bulls and cows for that guess to computer, for further guessing process.
+
+compilation: 
+1.	If you have make. write make command on a shell making working directory bullcow
+	this compiles source file and make executable bullcow
+2.	If you don't then write command
+	gcc *.c -o bullcow
