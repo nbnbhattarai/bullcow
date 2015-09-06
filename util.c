@@ -158,7 +158,7 @@ void getnextnumber(struct numstatus *sn, char *out, int n , int dgt_chars) // dg
 					break;
 				}
 			if ( k > 1000000){
-				printf ("You might enterd wrong bull and cow numbers.\n");
+				printf ("You might have enterd wrong bull/cow's number.\n");
 				break;
 			}
 		}

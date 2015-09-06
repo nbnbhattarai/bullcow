@@ -180,6 +180,7 @@
 		
 		printf ("Play Game : ");
 		if ( game_type == WITH_COMPUTER){	// play game with computer, 
+            printf ("Thinking...");
 			getnextnumber (ns , s , 0 , dgt_chars);
 		printf ("WITH COMPUTER.\n");
 			do{
@@ -195,22 +196,23 @@
 						break;
 					else{
 						if (dgt_chars == DIGIT_GAME)
-							printf ("Error: Length of input must be equal to length (default 4) and repeatation is not allowed.\n");
+							printf ("Error: Length of input must be equal to $length (default 4) and repeatation is not allowed.\n");
 						else
-							printf ("Error: Entered word must be valid english word of exact length (default 4) charecters.\n");
+							printf ("Error: Entered word must be a valid english word of exact length = $length (default 4) characters.\n");
 					}
 				}
 				if ( strcmp(sp1, s) == 0){ // if guess is matched so is winner
-					printf ("You win!\n");
+					printf ("Congratulations !!, You won the game!\n");
 					savescore (dgt_chars , game_type , gam + 1 , &score , 1);
 					printf ("Your Score : %d\n", score);
 					break;
 				}
 
+                printf ("Thinking...");
 				printf ("Bull no: %d Cow no: %d\n",noofbull(s,sp1),noofcow(s,sp1));
 				getscore (noofbull (s, sp1) , noofcow (s ,sp1)  , &score);
 				getnextnumber(ns, spc, gam + 1 , dgt_chars);
-				printf ("===========================\n"\
+				printf ("\n===========================\n"\
 						"computer's guess: %s ",spc);
 				do{
 					// ask if computer's guess matched or not
@@ -220,7 +222,7 @@
 				
 				// if guess is right
 				if(c[0] == 'y'){
-					printf ("Computer win!\n");
+					printf ("Sorry !!, Computer won the game!\n");
 					printf ("The number in computer's mind is : %s\n",s);
 					savescore (dgt_chars , game_type , gam + 1, &score , 0);
 					printf ("Your Score : %d\n", score);
@@ -245,6 +247,7 @@
 			gam = 0;
 			//getnextnumber (ns , s , 0 , dgt_chars);
 			do{
+                printf ("Thinking...");
 				getnextnumber (ns , s , gam + 1 , dgt_chars);
 				printf ("\n#%d : guess : %s ", gam + 1 , s);
 				do{
@@ -274,6 +277,7 @@
 			// It give you number of bulls and cows of your guess
 			// start from 0
 			gam = 0;
+            printf ("Thinking...");
 			getnextnumber (ns , s , 0 , dgt_chars);
 			
 			if (dgt_chars == WORD_GAME && givehint)
